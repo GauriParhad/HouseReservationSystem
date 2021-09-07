@@ -1,6 +1,6 @@
 package com.bridgelabz;
 
-public class HotelReservation(){
+public class HotelReservation{
     String hotel;
     String customer;
 
@@ -10,17 +10,16 @@ public class HotelReservation(){
 
     }
 
-    public HotelReservation()
         void hotelDetails () {
-            if (hotel == "Lakewood") {
+            if (hotel1 == "Lakewood") {
                 int rate = 110;
                 System.out.println("Rate of regular customers of lakewood hotel" + rate);
             }
-            if (hotel == "Bridgewood") {
+            if (hotel2 == "Bridgewood") {
                 int rate = 160;
                 System.out.println("Rate of regular customers of Bridgewood hotel" + rate);
             }
-            if (hotel == "Ridgewood") {
+            if (hotel3 == "Ridgewood") {
                 int rate = 220;
                 System.out.println("Rate of regular customers of Ridgewood hotel" + rate);
             }

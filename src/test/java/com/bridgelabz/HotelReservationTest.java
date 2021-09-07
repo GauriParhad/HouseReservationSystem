@@ -15,7 +15,5 @@ class HotelReservationTest {
     @Test
     public void toCheck_HotelDetails(){obj_hotel1.hotelDetails();}
 
-    @Test
-    public void toCheck_CheapHotel(){cheap_hotel.cheapestHotel();}
 
 }
