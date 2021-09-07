@@ -47,10 +47,36 @@ public class HotelReservation{
 
         }
 
+        //Calculating weekday and weekend rate of regular customers
+    public void weekday_weekend_rate() {
+        if (hotel == "Lakewood") {
+            int weekday_rate = 110;
+            int weekend_rate = 90;
+
+            System.out.println("Weekday Rate of regular customers of lakewood hotel" + weekday_rate);
+            System.out.println("Weekend Rate of regular customers of lakewood hotel" + weekend_rate);
+        }
+        if (hotel == "Bridgewood") {
+            int weekday_rate = 150;
+            int weekend_rate = 50;
+
+            System.out.println("Weekday Rate of regular customers of Bridgewood hotel" + weekday_rate);
+            System.out.println("Weekend Rate of regular customers of Bridgeewood hotel" + weekend_rate);
+
+        }
+        if (hotel == "Ridgewood") {
+            int weekday_rate = 220;
+            int weekend_rate = 150;
+            System.out.println("Weekday Rate of regular customers of Ridgewood hotel" + weekday_rate);
+            System.out.println("Weekend Rate of regular customers of Ridgeewood hotel" + weekend_rate);
+
+        }
+    }
+
     public static void main(String[] args) {
-        HotelReservation obj_hotel1 = new HotelReservation("Lakewood", "Regular");
-        HotelReservation obj_hotel2 = new HotelReservation("Bridgewood", "Regular");
-        HotelReservation obj_hotel3 = new HotelReservation("Ridgewood", "Regular");
+        HotelReservation hotel1 = new HotelReservation("Lakewood", "Regular");
+        HotelReservation hotel2 = new HotelReservation("Bridgewood", "Regular");
+        HotelReservation hotel3 = new HotelReservation("Ridgewood", "Regular");
         hotel1.hotelDetails();
         hotel2.hotelDetails();
         hotel3.hotelDetails();
@@ -58,10 +84,13 @@ public class HotelReservation{
         String sDate2 = "20-09-2019";
         Date date1 = new SimpleDateFormat("dd-MM-yyyy").parse(sDate1);
         Date date2 = new SimpleDateFormat("dd-MM-yyyy").parse(sDate2);
-        System.out.println(sDate1 + "\t" + date1);
-        System.out.println(sDate2 + "\t" + date2);
+        System.out.println(sDate1 + "\t" +date1);
+        System.out.println(sDate2 + "\t" +date2);
         HotelReservation hotel = new HotelReservation();
         hotel.cheapestHotel();
+        hotel1.weekday_weekend_rate();
+        hotel2.weekday_weekend_rate();
+        hotel3.weekday_weekend_rate();
     }
 
 }
