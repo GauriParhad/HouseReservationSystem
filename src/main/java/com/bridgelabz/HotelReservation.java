@@ -72,6 +72,37 @@ public class HotelReservation{
 
         }
     }
+    public void cheapest_weekday_weekend_hotel(){
+        int sum_Lakewood=0,sum_Bridgewood=0,sum_Ridgewood=0;
+        if(hotel=="Lakewood"){
+            int weekday_rate=110;
+            int weekend_rate=90;
+            sum_Lakewood=(sum_Lakewood+weekday_rate+weekend_rate);
+            System.out.println("Total Weekday and weekend rate of Lakewood Hotel" +sum_Lakewood);
+        }
+        if(hotel=="Bridgewood "){
+            int weekday_rate=150;
+            int weekend_rate=50;
+            sum_Bridgewood=(sum_Lakewood+weekday_rate+weekend_rate);
+            System.out.println("Total Weekday and weekend rate of Lakewood Hotel" +sum_Bridgewood);
+        }
+        if(hotel=="Ridgewood"){
+            int weekday_rate=220;
+            int weekend_rate=150;
+            sum_Ridgewood=(sum_Lakewood+weekday_rate+weekend_rate);
+            System.out.println("Total Weekday and weekend rate of Lakewood Hotel" +sum_Ridgewood);
+        }
+        if (sum_Lakewood<=sum_Bridgewood && sum_Lakewood<sum_Ridgewood){
+            System.out.println("Lakewood and Bridgewood woth total rates $200.");
+        }
+        if (sum_Bridgewood<=sum_Lakewood && sum_Bridgewood<sum_Ridgewood){
+            System.out.println("Lakewood and Bridgewood woth total rates $200.");
+        }
+        if (sum_Ridgewood<sum_Lakewood && sum_Ridgewood<sum_Bridgewood){
+            System.out.println("Ridgewood woth total rates $370.");
+        }
+
+    }
 
     public static void main(String[] args) {
         HotelReservation hotel1 = new HotelReservation("Lakewood", "Regular");
@@ -91,6 +122,10 @@ public class HotelReservation{
         hotel1.weekday_weekend_rate();
         hotel2.weekday_weekend_rate();
         hotel3.weekday_weekend_rate();
+        //checking cheapest weekday and weekend rated hotel
+        hotel1.cheapest_weekday_weekend_hotel();
+        hotel2.cheapest_weekday_weekend_hotel();
+        hotel3.cheapest_weekday_weekend_hotel();
     }
 
 }
